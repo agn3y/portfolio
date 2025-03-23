@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@keyframes slideRightSlow {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeftSlow {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slower animation duration for smooth 0.8x slow-motion */
+.animate-slide-right-slow {
+    animation: slideRightSlow 0.8s ease-in-out;
+}
+
+.animate-slide-left-slow {
+    animation: slideLeftSlow 0.8s ease-in-out;
+}
